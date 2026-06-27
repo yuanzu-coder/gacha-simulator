@@ -1258,7 +1258,7 @@ function printUI02(){
             （前回の天井到達から換算）
         </p>
         <p>
-            ※未入力の場合、oとして計算
+            ※未入力の場合、0として計算
             ※「連続すり抜け回数」は、イベント祈願・キャラクターで排出されるPU星5のみ参照
         </p>
         <br>
@@ -1287,8 +1287,8 @@ function printUI02(){
             <input type="text" id="rollNum">
         </p>
         <p>
+            ※未入力の場合、基準の確率までに必要なガチャ回数・予算などを出力<br>
             ※複数入力可
-            ※未入力の場合、基準の確率までに必要なガチャ回数・予算などを出力
         </p>
 
         <button onclick="calc02()">計算する</button>   
@@ -1432,6 +1432,7 @@ function calc02(){
             result.innerHTML = errors.join("<br>");
             return;
         }
+        myokoCount = Number(mc);
     }
     else myokoCount = 0;
 
@@ -1520,9 +1521,10 @@ function calc02(){
             html +=`
                 あなたは「` + makeRateText(resultCalc.mainProb, resultCalc.isGuaranteedMain) + `」の確率で目標を達成できます<br>
                 （予算余り：${statusCalc.moneyLeft}円、原石余り：${statusCalc.stoneLeft + resultCalc.rollNumleft * 160}個）<br>
-                ※予算は可能な限りすべて原石に交換（原石8080個で${stoneRate}円）したものとし、確定で対象を入手した場合には原石の余りを表示しています<br>
+                ※予算は可能な限りすべて原石に交換<br>
+                （原石8080個で${stoneRate}円）<br>
                 <br>
-                予算・原石・ガチャ回数を全て使い切った場合における、該当の凸数以上で終わる確率表
+                該当の凸数以上で終わる確率の表
                 <table>
                     <tr>
                         <th>凸状態</th>
