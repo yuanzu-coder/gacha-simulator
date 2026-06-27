@@ -1248,13 +1248,11 @@ function printUI02(){
             </select>
         </p>
         <p>
-            連続すり抜け回数：<br>
-            <input type="text" id="myokoCount"><br>
-            （すり抜け→PU確定の連続回数）
+            連続すり抜け回数：<input type="text" id="myokoCount"><br>
+            （すり抜け→確定PUの連続回数）
         </p>
         <p>
-            すでに引いた回数：<br>
-            <input type="text" id="rolledNum"><br>
+            すでに引いた回数：<input type="text" id="rolledNum"><br>
             （前回の天井到達から換算）
         </p>
         <p>
