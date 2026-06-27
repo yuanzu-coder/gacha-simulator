@@ -1239,7 +1239,7 @@ function printUI02(){
         <div id="UI02_2"></div>
         <div id="UI02_3"></div>
         <br>
-        <h3 class="optionTytle">現在の祈願状態</h3>
+        <h3 class="optionTytle">祈願状態</h3>
         <p>
             すり抜け状態：
             <select id="clipping" class="small">
@@ -1248,20 +1248,26 @@ function printUI02(){
             </select>
         </p>
         <p>
-            連続すり抜け回数（すり抜け→PU確定の連続回数）：<br>
+            連続すり抜け回数：<br>
             <input type="text" id="myokoCount"><br>
-            （未入力の場合、0として計算）<br>
-            ※イベント祈願・キャラクターで排出されるPU星5のみ有効（それ以外はこの値を無視）
+            （すり抜け→PU確定の連続回数）
         </p>
         <p>
-            すでに引いた回数（前回の天井到達から換算）：<br>
+            すでに引いた回数：<br>
             <input type="text" id="rolledNum"><br>
-            （未入力の場合、0として計算）
+            （前回の天井到達から換算）
+        </p>
+        <p>
+            ※未入力の場合、oとして計算
+            ※「連続すり抜け回数」は、イベント祈願・キャラクターで排出されるPU星5のみ参照
         </p>
         <br>
         <h3 class="optionTytle">祈願計画</h3>
         <p>
-            使用OS：
+            (予算・所持原石・ガチャ回数の値から算出される合計のガチャ回数で、対象を引ける確率を求めます)<br>
+        </p>
+        <p>
+            課金OS：
             <select id="device" class="small">
                 <option value="iOS">iOS</option>
                 <option value="PC">PC / Android</option>
@@ -1281,8 +1287,8 @@ function printUI02(){
             <input type="text" id="rollNum">
         </p>
         <p>
-            ※予算・所持原石・ガチャ回数の値から算出される合計のガチャ回数で、対象を引ける確率を求めます<br>
-            （複数入力でも可、未入力の場合は基準の確率までに必要なガチャ回数・予算などを表形式で出力します）
+            ※複数入力可
+            ※未入力の場合、基準の確率までに必要なガチャ回数・予算などを出力
         </p>
 
         <button onclick="calc02()">計算する</button>   
