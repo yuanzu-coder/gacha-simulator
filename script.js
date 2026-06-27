@@ -1249,7 +1249,8 @@ function printUI02(){
         </p>
         <p>
             連続すり抜け回数：<input type="text" id="myokoCount"><br>
-            （すり抜け→確定PUの連続回数）
+            （すり抜け→確定PUの連続回数）<br>
+            ※「連続すり抜け回数」は、イベント祈願・キャラクターで排出されるPU星5のみ参照
         </p>
         <p>
             すでに引いた回数：<input type="text" id="rolledNum"><br>
@@ -1257,7 +1258,6 @@ function printUI02(){
         </p>
         <p>
             ※未入力の場合、0として計算<br>
-            ※「連続すり抜け回数」は、イベント祈願・キャラクターで排出されるPU星5のみ参照
         </p>
         <br>
         <h3 class="optionTytle">祈願計画</h3>
